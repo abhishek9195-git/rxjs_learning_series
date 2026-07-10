@@ -18,9 +18,9 @@ export class App {
     this.stream.subscribe({next: (v) => console.log(v)})
 
     interval(1000).pipe(
-      mergeMap((i) => iif(
-        () => i < this.fruits.length, 
-        of(this.fruits[i]).pipe(tap(fruit => this.stream.next(fruit))), 
+      mergeMap((i) => 
+        iif(() => i < this.fruits.length, 
+          of(this.fruits[i]).pipe(tap(fruit => this.stream.next(fruit))), 
         EMPTY)
       )
     ).subscribe()
