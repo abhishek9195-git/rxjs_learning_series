@@ -1,0 +1,12 @@
+.flex-container {
+  display: flex;
+  gap: 1rem; /* preferred over margins */
+//   align-items: center;
+//   justify-content: space-between;
+
+    .flex-item {
+        flex: 1;
+        border: 1px solid #f2f2f2;
+        // padding: 15px;
+    }
+}

@@ -1,1 +1,27 @@
+<div class="flex-container">
+  <div class="flex-item">
+    <h4>Subscriber 1</h4>
+    <p>{{stream$ | async}}</p>
+
+    <input type="text" [formField]="user1MessageForm.message">
+    <button (click)="user1sendMessage()">Send</button>
+
+  </div>
+  <div class="flex-item">
+    <h4>Subscriber 2</h4>
+    <p>{{stream$ | async}}</p>
+
+    <input type="text" [formField]="user2MessageForm.message">
+    <button (click)="user2sendMessage()">Send</button>
+  </div>
+  <div class="flex-item">
+    <h4>Subscriber 3</h4>
+    <p>{{stream$ | async}}</p>
+
+    <input type="text" [formField]="user3MessageForm.message">
+    <button (click)="user3sendMessage()">Send</button>
+  </div>
+
+</div>
+
 <router-outlet />
