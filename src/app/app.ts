@@ -20,7 +20,7 @@ export class App {
     interval(1000).pipe(
       mergeMap((i) => iif(
         () => i < this.fruits.length, 
-        of(this.fruits[i]).pipe(tap(fruit => this.stream.next(fruit))) , 
+        of(this.fruits[i]).pipe(tap(fruit => this.stream.next(fruit))), 
         EMPTY)
       )
     ).subscribe()
