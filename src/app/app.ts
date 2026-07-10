@@ -35,6 +35,5 @@ export class App {
   )
 
   onSubmit(form: Event) {
-
   }
 }
