@@ -1,1 +1,8 @@
+<label for="">Select a category</label>
+<select name="" id="" [value]="category()" (change)="category.set($any($event.target).value)">
+    <option value="beauty">Beauty</option>
+    <option value="furniture">Furniture</option>
+    <option value="fragrances">Fragrances</option>
+</select>
+
 <router-outlet />
