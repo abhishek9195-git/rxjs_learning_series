@@ -1,8 +1,10 @@
 <label for="">Select a category</label>
-<select name="" id="" [value]="category()" (change)="category.set($any($event.target).value)">
+<select id="category" [formField]="form.category">
     <option value="beauty">Beauty</option>
     <option value="furniture">Furniture</option>
     <option value="fragrances">Fragrances</option>
+    <option value="groceries">Groceries</option>
+    <option value="laptops">Laptops</option>
 </select>
-
+<h1>{{form.category().value()}}</h1>
 <router-outlet />
